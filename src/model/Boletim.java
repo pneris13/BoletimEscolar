@@ -1,15 +1,12 @@
 package model;
 
 import java.util.HashMap;
-import java.util.Map;
 
 
 public class Boletim {
-	public String nome;
-	public String serie;
-//	private Map<materia, fase> notas; //DEVEMOS FAZER UM MAP PARA ALOCAR NOTAS
-		//fase: nota 1, nota 2, nota 3 e media final
-		//materia:portugues, matematica, ingles, ciencias  
+	private String nome;
+	private String serie;
+	private HashMap<String, String[]> notas; 
 	
 	public Boletim(String nome, String serie) {
 		this.nome = nome;
@@ -27,6 +24,14 @@ public class Boletim {
 	}
 	public void setSerie(String serie) {
 		this.serie = serie;
+	}
+
+	public HashMap<String, String[]> getNotas() {
+		return notas;
+	}
+
+	public void setNotas(HashMap<String, String[]> notas) {
+		this.notas = notas;
 	}
 
 }
